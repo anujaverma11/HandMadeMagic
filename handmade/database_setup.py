@@ -59,3 +59,5 @@ class Video(Base):
 
 engine = create_engine('sqlite:///handmade.db')
 Base.metadata.create_all(engine)
+
+
