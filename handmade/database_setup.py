@@ -10,10 +10,6 @@ from sqlalchemy import create_engine # used in configuration code at the end of 
 
 Base = declarative_base() # Let SQL know that classes are special SQLAlchemy classes.
 
-class MyArt(Base):
-  __tablename__='myart'
-  name = Column(String(250), nullable = False)
-  id = Column(Integer, primary_key = True)
 
 class Country(Base):
   __tablename__ = 'country'
@@ -51,11 +47,28 @@ class Photo(Base):
 
 class Video(Base):
   __tablename__ = 'video'
-  VideoURL = Column(String(250), nullable = False)
+  videoURL = Column(String(250), nullable = False)
   id = Column(Integer, primary_key = True)
   handicraft_id = Column(Integer, ForeignKey('handicraft.id'))
   handicraft = relationship(HandiCraft)
 
+class Artist(Base):
+  __tablename__='artist'
+  name = Column(String(250), nullable = False)
+  id = Column(Integer, primary_key = True)
+
+class Myart(Base):
+  __tablename__='myart'
+  title = Column(String(250), nullable = False)
+  id = Column(Integer, primary_key = True)
+  artist_id = Column(Integer, ForeignKey('artist.id'))
+  artist = relationship(Artist)
+  handicraft_id = Column(Integer, ForeignKey('handicraft.id'))
+  handicraft = relationship(HandiCraft)
+  photo_id = Column(Integer, ForeignKey('photo.id'))
+  photo = relationship(Photo)
+  video_id = Column(Integer, ForeignKey('video.id'))
+  video = relationship(Video)
 
 engine = create_engine('sqlite:///handmade.db')
 Base.metadata.create_all(engine)
