@@ -1,0 +1,29 @@
+<html>
+
+<body>
+
+<h1>{{craft.name}}</h1>
+
+
+{% for i in items %}
+
+<div>
+
+<p>{{i.name}}</p>
+
+<p>{{i.description}}</p>
+
+<p> {{i.price}} </p>
+
+<a href='{{url_for('editMenuItem', craft_id = craft.id, menu_id = i.id) }}'>Edit</a>
+
+</br>
+<a href = '{{url_for('deleteMenuItem', craft_id = craft.id, menu_id = i.id ) }}'>Delete</a>
+
+</div>
+
+
+{% endfor %}
+</body>
+
+</html>

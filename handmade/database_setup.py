@@ -23,20 +23,20 @@ class Region(Base):
   country_id = Column(Integer, ForeignKey('country.id'))
   country = relationship(Country)
 
-class Category(Base):
-  __tablename__ = 'category'
+class Craft(Base):
+  __tablename__ = 'craft'
   name = Column(String(250), nullable = False)
   id = Column(Integer, primary_key = True)
 
 class HandiCraft(Base):
   __tablename__ = 'handicraft'
-  sub_category = Column(String(250), nullable = False)
+  sub_craft = Column(String(250), nullable = False)
   id = Column(Integer, primary_key = True)
   description = Column(String(250))
   region_id = Column(Integer, ForeignKey('region.id'))
   region = relationship(Region)
-  category_id = Column(Integer, ForeignKey('category.id'))
-  category = relationship(Category)
+  craft_id = Column(Integer, ForeignKey('craft.id'))
+  craft = relationship(Craft)
 
 class Photo(Base):
   __tablename__ = 'photo'

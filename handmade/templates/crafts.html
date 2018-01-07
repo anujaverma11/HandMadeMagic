@@ -1,0 +1,13 @@
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+<h1>All things Handmade</h1>
+
+{% for i in crafts %}
+  <a href='{{url_for('showSubCrafts', craft_id = i.id) }}'>{{i.name}}</a>
+  <br>
+{% endfor %}
+</body>
+</html>

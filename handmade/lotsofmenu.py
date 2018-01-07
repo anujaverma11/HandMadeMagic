@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from database_setup import Base, Country, Region, Category, HandiCraft, Photo, Video, Myart, Artist
+from database_setup import Base, Country, Region, Craft, HandiCraft, Photo, Video, Myart, Artist
 
 engine = create_engine('sqlite:///handmade.db')
 # Bind the engine to the metadata of the Base class so that the
@@ -636,416 +636,416 @@ region2 = Region(cityName="Other", country=country203)
 session.add(region2)
 session.commit()
 
-category1 = Category(name = "Textile")
-session.add(category1)
+craft1 = Craft(name = "Textile")
+session.add(craft1)
 session.commit()
 
-category2 = Category(name = "Paper")
-session.add(category1)
+craft2 = Craft(name = "Paper")
+session.add(craft1)
 session.commit()
 
-category3 = Category(name = "Wood")
-session.add(category1)
+craft3 = Craft(name = "Wood")
+session.add(craft1)
 session.commit()
 
-category4 = Category(name = "Ceramic")
-session.add(category1)
+craft4 = Craft(name = "Ceramic")
+session.add(craft1)
 session.commit()
 
-category5 = Category(name = "Glass")
-session.add(category1)
+craft5 = Craft(name = "Glass")
+session.add(craft1)
 session.commit()
 
-category6 = Category(name = "Metal")
-session.add(category1)
+craft6 = Craft(name = "Metal")
+session.add(craft1)
 session.commit()
 
-category7 = Category(name = "Other")
-session.add(category1)
+craft7 = Craft(name = "Other")
+session.add(craft1)
 session.commit()
 
 
-handiCraft1=HandiCraft(sub_category="Banner-making", description="Something", region=region2, category=category1)
+handiCraft1=HandiCraft(sub_craft="Banner-making", description="Something", region=region2, craft=craft1)
 session.add(handiCraft1)
 session.commit()
 
-handiCraft2=HandiCraft(sub_category="Canvas", description="Something", region=region2, category=category1)
+handiCraft2=HandiCraft(sub_craft="Canvas", description="Something", region=region2, craft=craft1)
 session.add(handiCraft2)
 session.commit()
 
-handiCraft3=HandiCraft(sub_category="work", description="Something", region=region2, category=category1)
+handiCraft3=HandiCraft(sub_craft="work", description="Something", region=region2, craft=craft1)
 session.add(handiCraft3)
 session.commit()
 
-handiCraft4=HandiCraft(sub_category="Cross-stitch", description="Something", region=region2, category=category1)
+handiCraft4=HandiCraft(sub_craft="Cross-stitch", description="Something", region=region2, craft=craft1)
 session.add(handiCraft4)
 session.commit()
 
-handiCraft5=HandiCraft(sub_category="Crocheting", description="Something", region=region2, category=category1)
+handiCraft5=HandiCraft(sub_craft="Crocheting", description="Something", region=region2, craft=craft1)
 session.add(handiCraft5)
 session.commit()
 
-handiCraft6=HandiCraft(sub_category="Embroidery", description="Something", region=region2, category=category1)
+handiCraft6=HandiCraft(sub_craft="Embroidery", description="Something", region=region2, craft=craft1)
 session.add(handiCraft6)
 session.commit()
 
-handiCraft7=HandiCraft(sub_category="Felting", description="Something", region=region2, category=category1)
+handiCraft7=HandiCraft(sub_craft="Felting", description="Something", region=region2, craft=craft1)
 session.add(handiCraft7)
 session.commit()
 
-handiCraft8=HandiCraft(sub_category="Friendship", description="Something", region=region2, category=category1)
+handiCraft8=HandiCraft(sub_craft="Friendship", description="Something", region=region2, craft=craft1)
 session.add(handiCraft8)
 session.commit()
 
-handiCraft9=HandiCraft(sub_category="bracelet", description="Something", region=region2, category=category1)
+handiCraft9=HandiCraft(sub_craft="bracelet", description="Something", region=region2, craft=craft1)
 session.add(handiCraft9)
 session.commit()
 
-handiCraft10=HandiCraft(sub_category="Knitting", description="Something", region=region2, category=category1)
+handiCraft10=HandiCraft(sub_craft="Knitting", description="Something", region=region2, craft=craft1)
 session.add(handiCraft10)
 session.commit()
 
-handiCraft11=HandiCraft(sub_category="Lace-making", description="Something", region=region2, category=category1)
+handiCraft11=HandiCraft(sub_craft="Lace-making", description="Something", region=region2, craft=craft1)
 session.add(handiCraft11)
 session.commit()
 
-handiCraft12=HandiCraft(sub_category="Lucet", description="Something", region=region2, category=category1)
+handiCraft12=HandiCraft(sub_craft="Lucet", description="Something", region=region2, craft=craft1)
 session.add(handiCraft12)
 session.commit()
 
-handiCraft13=HandiCraft(sub_category="Macrame", description="Something", region=region2, category=category1)
+handiCraft13=HandiCraft(sub_craft="Macrame", description="Something", region=region2, craft=craft1)
 session.add(handiCraft13)
 session.commit()
 
-handiCraft14=HandiCraft(sub_category="Millinery", description="Something", region=region2, category=category1)
+handiCraft14=HandiCraft(sub_craft="Millinery", description="Something", region=region2, craft=craft1)
 session.add(handiCraft14)
 session.commit()
 
-handiCraft15=HandiCraft(sub_category="Needlepoint", description="Something", region=region2, category=category1)
+handiCraft15=HandiCraft(sub_craft="Needlepoint", description="Something", region=region2, craft=craft1)
 session.add(handiCraft15)
 session.commit()
 
-handiCraft16=HandiCraft(sub_category="Needlework", description="Something", region=region2, category=category1)
+handiCraft16=HandiCraft(sub_craft="Needlework", description="Something", region=region2, craft=craft1)
 session.add(handiCraft16)
 session.commit()
 
-handiCraft17=HandiCraft(sub_category="Patchwork", description="Something", region=region2, category=category1)
+handiCraft17=HandiCraft(sub_craft="Patchwork", description="Something", region=region2, craft=craft1)
 session.add(handiCraft17)
 session.commit()
 
-handiCraft18=HandiCraft(sub_category="Quilting", description="Something", region=region2, category=category1)
+handiCraft18=HandiCraft(sub_craft="Quilting", description="Something", region=region2, craft=craft1)
 session.add(handiCraft18)
 session.commit()
 
-handiCraft19=HandiCraft(sub_category="Ribbon embroidery", description="Something", region=region2, category=category1)
+handiCraft19=HandiCraft(sub_craft="Ribbon embroidery", description="Something", region=region2, craft=craft1)
 session.add(handiCraft19)
 session.commit()
 
-handiCraft20=HandiCraft(sub_category="Rug hooking", description="Something", region=region2, category=category1)
+handiCraft20=HandiCraft(sub_craft="Rug hooking", description="Something", region=region2, craft=craft1)
 session.add(handiCraft20)
 session.commit()
 
-handiCraft21=HandiCraft(sub_category="Rug making", description="Something", region=region2, category=category1)
+handiCraft21=HandiCraft(sub_craft="Rug making", description="Something", region=region2, craft=craft1)
 session.add(handiCraft21)
 session.commit()
 
-handiCraft22=HandiCraft(sub_category="Sewing", description="Something", region=region2, category=category1)
+handiCraft22=HandiCraft(sub_craft="Sewing", description="Something", region=region2, craft=craft1)
 session.add(handiCraft22)
 session.commit()
 
-handiCraft23=HandiCraft(sub_category="Shoemaking", description="Something", region=region2, category=category1)
+handiCraft23=HandiCraft(sub_craft="Shoemaking", description="Something", region=region2, craft=craft1)
 session.add(handiCraft23)
 session.commit()
 
-handiCraft24=HandiCraft(sub_category="Spinning (textiles)", description="Something", region=region2, category=category1)
+handiCraft24=HandiCraft(sub_craft="Spinning (textiles)", description="Something", region=region2, craft=craft1)
 session.add(handiCraft24)
 session.commit()
 
-handiCraft25=HandiCraft(sub_category="String art", description="Something", region=region2, category=category1)
+handiCraft25=HandiCraft(sub_craft="String art", description="Something", region=region2, craft=craft1)
 session.add(handiCraft25)
 session.commit()
 
-handiCraft26=HandiCraft(sub_category="Tapestry", description="Something", region=region2, category=category1)
+handiCraft26=HandiCraft(sub_craft="Tapestry", description="Something", region=region2, craft=craft1)
 session.add(handiCraft26)
 session.commit()
 
-handiCraft27=HandiCraft(sub_category="Tatting", description="Something", region=region2, category=category1)
+handiCraft27=HandiCraft(sub_craft="Tatting", description="Something", region=region2, craft=craft1)
 session.add(handiCraft27)
 session.commit()
 
-handiCraft28=HandiCraft(sub_category="Tie-dye", description="Something", region=region2, category=category1)
+handiCraft28=HandiCraft(sub_craft="Tie-dye", description="Something", region=region2, craft=craft1)
 session.add(handiCraft28)
 session.commit()
 
-handiCraft29=HandiCraft(sub_category="Weaving", description="Something", region=region2, category=category1)
+handiCraft29=HandiCraft(sub_craft="Weaving", description="Something", region=region2, craft=craft1)
 session.add(handiCraft29)
 session.commit()
 
-handiCraft30=HandiCraft(sub_category="Altered book", description="Something", region=region2, category=category2)
+handiCraft30=HandiCraft(sub_craft="Altered book", description="Something", region=region2, craft=craft2)
 session.add(handiCraft30)
 session.commit()
 
-handiCraft31=HandiCraft(sub_category="Bookbinding", description="Something", region=region2, category=category2)
+handiCraft31=HandiCraft(sub_craft="Bookbinding", description="Something", region=region2, craft=craft2)
 session.add(handiCraft31)
 session.commit()
 
-handiCraft32=HandiCraft(sub_category="Calligraphy", description="Something", region=region2, category=category2)
+handiCraft32=HandiCraft(sub_craft="Calligraphy", description="Something", region=region2, craft=craft2)
 session.add(handiCraft32)
 session.commit()
 
-handiCraft33=HandiCraft(sub_category="Cardmaking", description="Something", region=region2, category=category2)
+handiCraft33=HandiCraft(sub_craft="Cardmaking", description="Something", region=region2, craft=craft2)
 session.add(handiCraft33)
 session.commit()
 
-handiCraft34=HandiCraft(sub_category="Cast paper", description="Something", region=region2, category=category2)
+handiCraft34=HandiCraft(sub_craft="Cast paper", description="Something", region=region2, craft=craft2)
 session.add(handiCraft34)
 session.commit()
 
-handiCraft35=HandiCraft(sub_category="Collage", description="Something", region=region2, category=category2)
+handiCraft35=HandiCraft(sub_craft="Collage", description="Something", region=region2, craft=craft2)
 session.add(handiCraft35)
 session.commit()
 
-handiCraft36=HandiCraft(sub_category="Decoupage", description="Something", region=region2, category=category2)
+handiCraft36=HandiCraft(sub_craft="Decoupage", description="Something", region=region2, craft=craft2)
 session.add(handiCraft36)
 session.commit()
 
-handiCraft37=HandiCraft(sub_category="Photomontage", description="Something", region=region2, category=category2)
+handiCraft37=HandiCraft(sub_craft="Photomontage", description="Something", region=region2, craft=craft2)
 session.add(handiCraft37)
 session.commit()
 
-handiCraft38=HandiCraft(sub_category="Embossing", description="Something", region=region2, category=category2)
+handiCraft38=HandiCraft(sub_craft="Embossing", description="Something", region=region2, craft=craft2)
 session.add(handiCraft38)
 session.commit()
 
-handiCraft39=HandiCraft(sub_category="Iris folding", description="Something", region=region2, category=category2)
+handiCraft39=HandiCraft(sub_craft="Iris folding", description="Something", region=region2, craft=craft2)
 session.add(handiCraft39)
 session.commit()
 
-handiCraft40=HandiCraft(sub_category="Marbling", description="Something", region=region2, category=category2)
+handiCraft40=HandiCraft(sub_craft="Marbling", description="Something", region=region2, craft=craft2)
 session.add(handiCraft40)
 session.commit()
 
-handiCraft41=HandiCraft(sub_category="Origami( Kirigami + Moneygami)", description="Something", region=region2, category=category2)
+handiCraft41=HandiCraft(sub_craft="Origami( Kirigami + Moneygami)", description="Something", region=region2, craft=craft2)
 session.add(handiCraft41)
 session.commit()
 
-handiCraft42=HandiCraft(sub_category="Paper cutting", description="Something", region=region2, category=category2)
+handiCraft42=HandiCraft(sub_craft="Paper cutting", description="Something", region=region2, craft=craft2)
 session.add(handiCraft42)
 session.commit()
 
-handiCraft43=HandiCraft(sub_category="Paper toys", description="Something", region=region2, category=category2)
+handiCraft43=HandiCraft(sub_craft="Paper toys", description="Something", region=region2, craft=craft2)
 session.add(handiCraft43)
 session.commit()
 
-handiCraft44=HandiCraft(sub_category="Papercraft", description="Something", region=region2, category=category2)
+handiCraft44=HandiCraft(sub_craft="Papercraft", description="Something", region=region2, craft=craft2)
 session.add(handiCraft44)
 session.commit()
 
-handiCraft45=HandiCraft(sub_category="Papermaking", description="Something", region=region2, category=category2)
+handiCraft45=HandiCraft(sub_craft="Papermaking", description="Something", region=region2, craft=craft2)
 session.add(handiCraft45)
 session.commit()
 
-handiCraft46=HandiCraft(sub_category="Papier-mâché", description="Something", region=region2, category=category2)
+handiCraft46=HandiCraft(sub_craft="Papier-mache", description="Something", region=region2, craft=craft2)
 session.add(handiCraft46)
 session.commit()
 
-handiCraft47=HandiCraft(sub_category="Pop-up book", description="Something", region=region2, category=category2)
+handiCraft47=HandiCraft(sub_craft="Pop-up book", description="Something", region=region2, craft=craft2)
 session.add(handiCraft47)
 session.commit()
 
-handiCraft48=HandiCraft(sub_category="Quilling", description="Something", region=region2, category=category2)
+handiCraft48=HandiCraft(sub_craft="Quilling", description="Something", region=region2, craft=craft2)
 session.add(handiCraft48)
 session.commit()
 
-handiCraft49=HandiCraft(sub_category="Scrapbooking", description="Something", region=region2, category=category2)
+handiCraft49=HandiCraft(sub_craft="Scrapbooking", description="Something", region=region2, craft=craft2)
 session.add(handiCraft49)
 session.commit()
 
-handiCraft50=HandiCraft(sub_category="Stamping", description="Something", region=region2, category=category2)
+handiCraft50=HandiCraft(sub_craft="Stamping", description="Something", region=region2, craft=craft2)
 session.add(handiCraft50)
 session.commit()
 
-handiCraft51=HandiCraft(sub_category="Wallpaper", description="Something", region=region2, category=category2)
+handiCraft51=HandiCraft(sub_craft="Wallpaper", description="Something", region=region2, craft=craft2)
 session.add(handiCraft51)
 session.commit()
 
-handiCraft52=HandiCraft(sub_category="Bentwood", description="Something", region=region2, category=category3)
+handiCraft52=HandiCraft(sub_craft="Bentwood", description="Something", region=region2, craft=craft3)
 session.add(handiCraft52)
 session.commit()
 
-handiCraft53=HandiCraft(sub_category="Cabinetry", description="Something", region=region2, category=category3)
+handiCraft53=HandiCraft(sub_craft="Cabinetry", description="Something", region=region2, craft=craft3)
 session.add(handiCraft53)
 session.commit()
 
-handiCraft54=HandiCraft(sub_category="Carpentry", description="Something", region=region2, category=category3)
+handiCraft54=HandiCraft(sub_craft="Carpentry", description="Something", region=region2, craft=craft3)
 session.add(handiCraft54)
 session.commit()
 
-handiCraft55=HandiCraft(sub_category="Chip carving", description="Something", region=region2, category=category3)
+handiCraft55=HandiCraft(sub_craft="Chip carving", description="Something", region=region2, craft=craft3)
 session.add(handiCraft55)
 session.commit()
 
-handiCraft56=HandiCraft(sub_category="Ébéniste", description="Something", region=region2, category=category3)
+handiCraft56=HandiCraft(sub_craft="Ebeniste", description="Something", region=region2, craft=craft3)
 session.add(handiCraft56)
 session.commit()
 
-handiCraft57=HandiCraft(sub_category="Fretwork", description="Something", region=region2, category=category3)
+handiCraft57=HandiCraft(sub_craft="Fretwork", description="Something", region=region2, craft=craft3)
 session.add(handiCraft57)
 session.commit()
 
-handiCraft58=HandiCraft(sub_category="Intarsia", description="Something", region=region2, category=category3)
+handiCraft58=HandiCraft(sub_craft="Intarsia", description="Something", region=region2, craft=craft3)
 session.add(handiCraft58)
 session.commit()
 
-handiCraft59=HandiCraft(sub_category="Marquetry", description="Something", region=region2, category=category3)
+handiCraft59=HandiCraft(sub_craft="Marquetry", description="Something", region=region2, craft=craft3)
 session.add(handiCraft59)
 session.commit()
 
-handiCraft60=HandiCraft(sub_category="Wood burning", description="Something", region=region2, category=category3)
+handiCraft60=HandiCraft(sub_craft="Wood burning", description="Something", region=region2, craft=craft3)
 session.add(handiCraft60)
 session.commit()
 
-handiCraft61=HandiCraft(sub_category="Wood carving", description="Something", region=region2, category=category3)
+handiCraft61=HandiCraft(sub_craft="Wood carving", description="Something", region=region2, craft=craft3)
 session.add(handiCraft61)
 session.commit()
 
-handiCraft62=HandiCraft(sub_category="Wood turning", description="Something", region=region2, category=category3)
+handiCraft62=HandiCraft(sub_craft="Wood turning", description="Something", region=region2, craft=craft3)
 session.add(handiCraft62)
 session.commit()
 
-handiCraft63=HandiCraft(sub_category="Azulejo", description="Something", region=region2, category=category4)
+handiCraft63=HandiCraft(sub_craft="Azulejo", description="Something", region=region2, craft=craft4)
 session.add(handiCraft63)
 session.commit()
 
-handiCraft64=HandiCraft(sub_category="Bone china", description="Something", region=region2, category=category4)
+handiCraft64=HandiCraft(sub_craft="Bone china", description="Something", region=region2, craft=craft4)
 session.add(handiCraft64)
 session.commit()
 
-handiCraft65=HandiCraft(sub_category="Earthenware", description="Something", region=region2, category=category4)
+handiCraft65=HandiCraft(sub_craft="Earthenware", description="Something", region=region2, craft=craft4)
 session.add(handiCraft65)
 session.commit()
 
-handiCraft66=HandiCraft(sub_category="Porcelain", description="Something", region=region2, category=category4)
+handiCraft66=HandiCraft(sub_craft="Porcelain", description="Something", region=region2, craft=craft4)
 session.add(handiCraft66)
 session.commit()
 
-handiCraft67=HandiCraft(sub_category="Pottery", description="Something", region=region2, category=category4)
+handiCraft67=HandiCraft(sub_craft="Pottery", description="Something", region=region2, craft=craft4)
 session.add(handiCraft67)
 session.commit()
 
-handiCraft68=HandiCraft(sub_category="Stoneware", description="Something", region=region2, category=category4)
+handiCraft68=HandiCraft(sub_craft="Stoneware", description="Something", region=region2, craft=craft4)
 session.add(handiCraft68)
 session.commit()
 
-handiCraft69=HandiCraft(sub_category="Terracotta", description="Something", region=region2, category=category4)
+handiCraft69=HandiCraft(sub_craft="Terracotta", description="Something", region=region2, craft=craft4)
 session.add(handiCraft69)
 session.commit()
 
-handiCraft70=HandiCraft(sub_category="Cameo glass", description="Something", region=region2, category=category5)
+handiCraft70=HandiCraft(sub_craft="Cameo glass", description="Something", region=region2, craft=craft5)
 session.add(handiCraft70)
 session.commit()
 
-handiCraft71=HandiCraft(sub_category="Glassware", description="Something", region=region2, category=category5)
+handiCraft71=HandiCraft(sub_craft="Glassware", description="Something", region=region2, craft=craft5)
 session.add(handiCraft71)
 session.commit()
 
-handiCraft72=HandiCraft(sub_category="Stained glass", description="Something", region=region2, category=category5)
+handiCraft72=HandiCraft(sub_craft="Stained glass", description="Something", region=region2, craft=craft5)
 session.add(handiCraft72)
 session.commit()
 
-handiCraft73=HandiCraft(sub_category="Engraving", description="Something", region=region2, category=category6)
+handiCraft73=HandiCraft(sub_craft="Engraving", description="Something", region=region2, craft=craft6)
 session.add(handiCraft73)
 session.commit()
 
-handiCraft74=HandiCraft(sub_category="Jewellery", description="Something", region=region2, category=category6)
+handiCraft74=HandiCraft(sub_craft="Jewellery", description="Something", region=region2, craft=craft6)
 session.add(handiCraft74)
 session.commit()
 
-handiCraft75=HandiCraft(sub_category="Goldsmith", description="Something", region=region2, category=category6)
+handiCraft75=HandiCraft(sub_craft="Goldsmith", description="Something", region=region2, craft=craft6)
 session.add(handiCraft75)
 session.commit()
 
-handiCraft76=HandiCraft(sub_category="Silversmith", description="Something", region=region2, category=category6)
+handiCraft76=HandiCraft(sub_craft="Silversmith", description="Something", region=region2, craft=craft6)
 session.add(handiCraft76)
 session.commit()
 
-handiCraft77=HandiCraft(sub_category="Assemblage", description="Something", region=region2, category=category7)
+handiCraft77=HandiCraft(sub_craft="Assemblage", description="Something", region=region2, craft=craft7)
 session.add(handiCraft77)
 session.commit()
 
-handiCraft78=HandiCraft(sub_category="Balloon modelling", description="Something", region=region2, category=category7)
+handiCraft78=HandiCraft(sub_craft="Balloon modelling", description="Something", region=region2, craft=craft7)
 session.add(handiCraft78)
 session.commit()
 
-handiCraft79=HandiCraft(sub_category="Beadwork", description="Something", region=region2, category=category7)
+handiCraft79=HandiCraft(sub_craft="Beadwork", description="Something", region=region2, craft=craft7)
 session.add(handiCraft79)
 session.commit()
 
-handiCraft80=HandiCraft(sub_category="Bone carving", description="Something", region=region2, category=category7)
+handiCraft80=HandiCraft(sub_craft="Bone carving", description="Something", region=region2, craft=craft7)
 session.add(handiCraft80)
 session.commit()
 
-handiCraft81=HandiCraft(sub_category="Doll making", description="Something", region=region2, category=category7)
+handiCraft81=HandiCraft(sub_craft="Doll making", description="Something", region=region2, craft=craft7)
 session.add(handiCraft81)
 session.commit()
 
-handiCraft82=HandiCraft(sub_category="Dollhouse", description="Something", region=region2, category=category7)
+handiCraft82=HandiCraft(sub_craft="Dollhouse", description="Something", region=region2, craft=craft7)
 session.add(handiCraft82)
 session.commit()
 
-handiCraft83=HandiCraft(sub_category="Egg decorating", description="Something", region=region2, category=category7)
+handiCraft83=HandiCraft(sub_craft="Egg decorating", description="Something", region=region2, craft=craft7)
 session.add(handiCraft83)
 session.commit()
 
-handiCraft84=HandiCraft(sub_category="Engraved gems", description="Something", region=region2, category=category7)
+handiCraft84=HandiCraft(sub_craft="Engraved gems", description="Something", region=region2, craft=craft7)
 session.add(handiCraft84)
 session.commit()
 
-handiCraft85=HandiCraft(sub_category="Hardstone carving", description="Something", region=region2, category=category7)
+handiCraft85=HandiCraft(sub_craft="Hardstone carving", description="Something", region=region2, craft=craft7)
 session.add(handiCraft85)
 session.commit()
 
-handiCraft86=HandiCraft(sub_category="Lathart", description="Something", region=region2, category=category7)
+handiCraft86=HandiCraft(sub_craft="Lathart", description="Something", region=region2, craft=craft7)
 session.add(handiCraft86)
 session.commit()
 
-handiCraft87=HandiCraft(sub_category="Lapidary", description="Something", region=region2, category=category7)
+handiCraft87=HandiCraft(sub_craft="Lapidary", description="Something", region=region2, craft=craft7)
 session.add(handiCraft87)
 session.commit()
 
-handiCraft88=HandiCraft(sub_category="Leatherworking", description="Something", region=region2, category=category7)
+handiCraft88=HandiCraft(sub_craft="Leatherworking", description="Something", region=region2, craft=craft7)
 session.add(handiCraft88)
 session.commit()
 
-handiCraft89=HandiCraft(sub_category="Miniatures", description="Something", region=region2, category=category7)
+handiCraft89=HandiCraft(sub_craft="Miniatures", description="Something", region=region2, craft=craft7)
 session.add(handiCraft89)
 session.commit()
 
-handiCraft90=HandiCraft(sub_category="Micromosaic", description="Something", region=region2, category=category7)
+handiCraft90=HandiCraft(sub_craft="Micromosaic", description="Something", region=region2, craft=craft7)
 session.add(handiCraft90)
 session.commit()
 
-handiCraft91=HandiCraft(sub_category="Mosaic", description="Something", region=region2, category=category7)
+handiCraft91=HandiCraft(sub_craft="Mosaic", description="Something", region=region2, craft=craft7)
 session.add(handiCraft91)
 session.commit()
 
-handiCraft92=HandiCraft(sub_category="Pietra dura", description="Something", region=region2, category=category7)
+handiCraft92=HandiCraft(sub_craft="Pietra dura", description="Something", region=region2, craft=craft7)
 session.add(handiCraft92)
 session.commit()
 
-handiCraft93=HandiCraft(sub_category="Pressed flower craft", description="Something", region=region2, category=category7)
+handiCraft93=HandiCraft(sub_craft="Pressed flower craft", description="Something", region=region2, craft=craft7)
 session.add(handiCraft93)
 session.commit()
 
-handiCraft94=HandiCraft(sub_category="Scrimshaw", description="Something", region=region2, category=category7)
+handiCraft94=HandiCraft(sub_craft="Scrimshaw", description="Something", region=region2, craft=craft7)
 session.add(handiCraft94)
 session.commit()
 
-handiCraft95=HandiCraft(sub_category="Straw marquetry", description="Something", region=region2, category=category7)
+handiCraft95=HandiCraft(sub_craft="Straw marquetry", description="Something", region=region2, craft=craft7)
 session.add(handiCraft95)
 session.commit()
 
-handiCraft96=HandiCraft(sub_category="Wall decal", description="Something", region=region2, category=category7)
+handiCraft96=HandiCraft(sub_craft="Wall decal", description="A wall decal, also known as a wall sticker, wall tattoo, or wall vinyl, is a vinyl sticker that is affixed to a wall or other smooth surface for decoration and informational purposes. Wall decals are cut with vinyl cutting machines. Most decals use only one color, but some may have various images printed upon them.", region=region2, craft=craft7)
 session.add(handiCraft96)
 session.commit()
 
